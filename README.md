@@ -19,3 +19,11 @@ withdrawal, and a transfer.
 * Individual accounts have a withdrawal limit of 500 dollars.
 * Transactions are made on accounts.
 * Transaction types include: Deposit, Withdraw, and Transfer
+
+## Is this solution SOLID?
+
+* Single Responsibility Principle: Each class is related to a single purpose. There are no "Swiss Army knife" classes.
+* Open/Closed Principle: Account does not need to be modified if additional types are added later.
+* Liskov Substitution Principle: CheckingAccount and InvestmentAccount can be used in place of Account with breaking any functionality.
+* Interface Segregation Principle: The client is not required to implement an interface that is to braod for it's needs. In fact no interface was added.
+* Dependency Inversion Principle: If the scope of this assignment were a little larger this might come into play. Common areas for DI are logging, databases, email, etc.  
